@@ -1,0 +1,11 @@
+FROM mcr.microsoft.com/vscode/devcontainers/universal:latest
+
+RUN apt-get update && apt-get install -y \
+    python3 \
+    python3-pip \
+    nodejs \
+    npm
+
+RUN pip3 install Flask
+
+RUN npm install -g @vue/cli
